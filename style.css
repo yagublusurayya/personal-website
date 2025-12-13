@@ -306,3 +306,45 @@ nav a.active::after {
     background-color: #6c5ce7;
     border-radius: 2px;
 }
+
+/* Modern Gradient Logo */
+.logo {
+    font-size: 2rem;
+    font-weight: 800;
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px 0;
+    background: linear-gradient(90deg, #2d3436 0%, #2d3436 45%, #6c5ce7 55%, #6c5ce7 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    position: relative;
+    transition: all 0.4s ease;
+    letter-spacing: -0.5px;
+}
+
+.logo:hover {
+    background: linear-gradient(90deg, #6c5ce7 0%, #fd79a8 50%, #00cec9 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    transform: translateY(-3px);
+    text-shadow: 0 5px 15px rgba(106, 92, 231, 0.1);
+}
+
+/* Animated underline */
+.logo::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #6c5ce7, #fd79a8, #00cec9);
+    border-radius: 2px;
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+}
+
+.logo:hover::after {
+    transform: scaleX(1);
+}
