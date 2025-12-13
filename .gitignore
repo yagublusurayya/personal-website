@@ -1,0 +1,24 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor/IDE Files
+.vscode/
+*.swp
+*.swo
+*~
+
+# Logs and databases
+*.log
+*.sql
+*.sqlite
+
+# Large files (optional)
+*.psd
+*.zip
+*.mp4
+*.mov
+
+# Node modules (for future)
+node_modules/
