@@ -210,22 +210,27 @@ footer p {
     font-size: 1rem;
 }
 
-/* Page Header */
+/* Page Header (for all pages) */
 .page-header {
-    padding: 100px 0 60px;
+    padding: 120px 0 80px;
     text-align: center;
     background: linear-gradient(135deg, #6c5ce7, #a29bfe);
     color: white;
+    margin-top: 60px; /* Accounts for fixed navbar */
 }
 
 .page-header h1 {
-    font-size: 3rem;
-    margin-bottom: 15px;
+    font-size: 3.2rem;
+    margin-bottom: 20px;
+    font-weight: 700;
 }
 
 .page-header p {
-    font-size: 1.2rem;
-    opacity: 0.9;
+    font-size: 1.3rem;
+    opacity: 0.95;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
 }
 
 /* About Page */
@@ -274,19 +279,158 @@ footer p {
     font-size: 0.9rem;
 }
 
-/* Contact Page */
+/* Contact Content Section */
 .contact-content {
-    padding: 60px 0;
+    padding: 80px 0;
     background-color: #fff;
+    min-height: 60vh;
 }
 
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Contact Info Box */
+.contact-info {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 50px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border: 1px solid #eef2f7;
+}
+
+.contact-info h2 {
+    color: #2d3436;
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #6c5ce7;
+    font-weight: 700;
+}
+
+.contact-info h3 {
+    color: #2d3436;
+    font-size: 1.8rem;
+    margin: 40px 0 20px;
+    font-weight: 600;
+}
+
+.contact-info p {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Contact Links */
 .contact-info a {
     color: #6c5ce7;
     text-decoration: none;
+    font-weight: 600;
+    padding: 3px 0;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+    display: inline-block;
 }
 
 .contact-info a:hover {
-    text-decoration: underline;
+    color: #5a4bd1;
+    border-bottom: 2px solid #6c5ce7;
+    transform: translateY(-2px);
+}
+
+/* Contact Items */
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+    background: #f1f3ff;
+    transform: translateX(10px);
+}
+
+.contact-icon {
+    font-size: 1.8rem;
+    margin-right: 20px;
+    color: #6c5ce7;
+    width: 50px;
+    height: 50px;
+    background: #eef2ff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-text {
+    flex: 1;
+}
+
+.contact-text h4 {
+    color: #2d3436;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+}
+
+.contact-text p {
+    margin: 0;
+    color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .page-header {
+        padding: 100px 0 60px;
+        margin-top: 0;
+    }
+    
+    .page-header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .page-header p {
+        font-size: 1.1rem;
+        padding: 0 20px;
+    }
+    
+    .contact-content {
+        padding: 50px 0;
+    }
+    
+    .contact-info {
+        padding: 30px 20px;
+        margin: 0 15px;
+    }
+    
+    .contact-info h2 {
+        font-size: 1.8rem;
+    }
+    
+    .contact-info h3 {
+        font-size: 1.5rem;
+    }
+    
+    .contact-item {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .contact-icon {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
 }
 
 /* Active page highlight in navigation */
@@ -347,4 +491,16 @@ nav a.active::after {
 
 .logo:hover::after {
     transform: scaleX(1);
+}
+
+/* Logo Surname/Given Name Styles */
+.logo-surname {
+    font-weight: 800;
+    color: #2d3436;
+}
+
+.logo-givenname {
+    color: #6c5ce7;
+    font-weight: 700;
+    margin-left: 5px;
 }
